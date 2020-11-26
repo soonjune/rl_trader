@@ -212,7 +212,8 @@ if __name__ == '__main__':
     data = get_data() # time series data
     n_timesteps, n_stocks = data.shape
 
-    n_train = n_timesteps // 2
+    ## 수정할 수도
+    n_train = n_timesteps
 
     train_data = data[:n_train]
     test_data = data[n_train:]

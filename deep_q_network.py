@@ -19,6 +19,7 @@ class MLP(nn.Module):
         self.layers = nn.Sequential(*self.layers)
 
 
+
     def forward(self, X):
         return self.layers(X)
 
