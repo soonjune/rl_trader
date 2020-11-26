@@ -6,26 +6,28 @@ import numpy as np
 from replay_memory import ReplayBuffer
 from deep_q_network import MLP
 
+device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+
 
 def predict(model, np_states):
     with torch.no_grad():
-        inputs = torch.from_numpy(np_states.astype(np.float32))
-        output = model(inputs)
+        inputs = torch.from_numpy(np_states.astype(np.float32)).to(device)
+        output = model(inputs).to(device)
         # print("output:", output)
-        return output.numpy()
+        return output.cpu().numpy()
 
 
 def train_one_step(model, criterion, optimizer, inputs, targets):
     # convert to tensors
-    inputs = torch.from_numpy(inputs.astype(np.float32))
-    targets = torch.from_numpy(targets.astype(np.float32))
+    inputs = torch.from_numpy(inputs.astype(np.float32)).to(device)
+    targets = torch.from_numpy(targets.astype(np.float32)).to(device)
 
     # zero the parameter gradients
     optimizer.zero_grad()
 
     # Forward pass
     outputs = model(inputs)
-    loss = criterion(outputs, targets)
+    loss = criterion(outputs, targets).to(device)
 
     # Backward and optimize
     loss.backward()
@@ -41,7 +43,7 @@ class DQNAgent(object):
         self.epsilon = 1.0  # exploration rate
         self.epsilon_min = 0.01
         self.epsilon_decay = 0.995
-        self.model = MLP(state_size, action_size)
+        self.model = MLP(state_size, action_size).to(device)
 
         # Loss and optimizer
         self.criterion = nn.MSELoss()

@@ -3,7 +3,7 @@ import torch.nn as nn
 
 # Q-function approximator
 class MLP(nn.Module):
-    def __init__(self, n_inputs, n_action, n_hidden_layers=1, hidden_dim=32):
+    def __init__(self, n_inputs, n_action, n_hidden_layers=2, hidden_dim=128):
         super(MLP, self).__init__()
 
         M = n_inputs
