@@ -15,7 +15,7 @@ from dqn_agent import DQNAgent
 def get_data():
     # returns a T x 3 list of stock prices
     # each row is a different stock
-    df = pd.read_csv('black_month.csv')
+    df = pd.read_csv('may_to_august_test.csv')
     return df.values
 
 
@@ -214,6 +214,9 @@ if __name__ == '__main__':
 
     ## 수정할 수도
     n_train = n_timesteps
+    ## test mode
+    if args.mode == 'test':
+        n_train = 0
 
     train_data = data[:n_train]
     test_data = data[n_train:]
@@ -237,7 +240,10 @@ if __name__ == '__main__':
 
         # make sure epsilon is not 1!
         # no need to run multiple episodes if epsilon = 0, it's deterministic
-        agent.epsilon = 0.01
+        agent.epsilon = 0.0
+        num_episodes = 1
+
+        # agent.epsilon = 0.01
 
         # load trained weights
         agent.load(f'{models_folder}/dqn.ckpt')
