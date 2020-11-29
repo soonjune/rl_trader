@@ -9,10 +9,15 @@ class MLP(nn.Module):
         M = n_inputs
         self.layers = []
         for _ in range(n_hidden_layers):
-            layer = nn.Linear(M, hidden_dim)
+            layer = nn.utils.weight_norm(nn.Linear(M, hidden_dim))
             M = hidden_dim
             self.layers.append(layer)
             self.layers.append(nn.ReLU())
+            # for batch norm
+            # self.layers.append(nn.BatchNorm1d(M))
+
+        # remove last batch norm layer
+        # self.layers.pop()
 
         # final layer
         self.layers.append(nn.Linear(M, n_action))

@@ -3,4 +3,7 @@
 /for_rl_trader.csv
 /rl_trader_models
 /rl_trader_rewards
-/may_to_august_test.csv
+/2020march_to_august_test.csv
+/backtest726809.csv
+/backtest07260809.csv
+/library/cf.py
