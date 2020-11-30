@@ -1,8 +1,11 @@
 import sys
+import logging
+from datetime import date
 from PyQt5.QtWidgets import *
 from PyQt5.QAxContainer import *
 from PyQt5.QtCore import *
-import time
+from library import db_settings
+
 from collections import defaultdict
 from pandas import DataFrame
 from library.logging_pack import logger
@@ -84,8 +87,8 @@ class Kiwoom(QAxWidget):
             pass
 
     def _opt10080(self, rqname, trcode):
-        data_cnt = self._get_repeat_cnt(trcode, rqname)
-        for i in range(data_cnt):
+        # data_cnt = self._get_repeat_cnt(trcode, rqname)
+        for i in range(2):
             date = self._get_comm_data(trcode, rqname, i, "체결시간")
             open = self._get_comm_data(trcode, rqname, i, "시가")
             high = self._get_comm_data(trcode, rqname, i, "고가")
@@ -93,7 +96,7 @@ class Kiwoom(QAxWidget):
             close = self._get_comm_data(trcode, rqname, i, "현재가")
             volume = self._get_comm_data(trcode, rqname, i, "거래량")
 
-            self.ohlcv['date'].append(date[:-2])
+            self.ohlcv['date'].append(date[:])
             self.ohlcv['open'].append(abs(int(open)))
             self.ohlcv['high'].append(abs(int(high)))
             self.ohlcv['low'].append(abs(int(low)))
@@ -123,7 +126,7 @@ class Kiwoom(QAxWidget):
             logger.critical(e)
 
 
-    def get_one_day_option_data(self, code, start, option):
+    def get_one_day_option_data(self, code, start):
         self.ohlcv = defaultdict(list)
 
         self.set_input_value("종목코드", code)
@@ -132,30 +135,46 @@ class Kiwoom(QAxWidget):
 
         self.set_input_value("수정주가구분", 1)
 
-        self.comm_rq_data("opt10081_req", "opt10081", 0, "0101")
+        self.comm_rq_data("opt10080_req", "opt10080", 0, "0101")
 
         if self.ohlcv['date'] == '':
             return False
 
         df = DataFrame(self.ohlcv, columns=['open', 'high', 'low', 'close', 'volume'], index=self.ohlcv['date'])
-        if df:
-            return df
+        return df
 
 
-            return False
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     kiwoom = Kiwoom()
     kiwoom.comm_connect()
 
+    today = date.today().strftime("%Y%m%d")
     codes = ['005930', '066570', '012450', '035420', '035720']
-    # opt10080 TR 요청
-    for code in codes:
+    names = ['samsung_elec', 'lg_elec', 'hanwha_aero', 'naver', 'kakao']
+
+    conns = db_settings.db_set(today)
+
+    # opt10080 TR 요청 - 30초 단위 가격 가져오기(가장 최근으로)
+    for code, name in zip(codes, names):
         data = defaultdict(list)
-        kiwoom.set_input_value("종목코드", code)
-        kiwoom.set_input_value("틱범위", 1)
-        kiwoom.set_input_value("수정주가구분", 1)
-        kiwoom.comm_rq_data("opt10080_req", "opt10080", 0, "1999")
+        ret = kiwoom.get_one_day_option_data(code, today)
+        sql = f"insert into `{ret.index[0][:-6]}` \
+         values ({ret.index[0]}, {ret['open'][0]}, {ret['high'][0]}, {ret['low'][0]}, {ret['close'][0]}, {ret['volume'][0]})"
+        try:
+            conns[name].cursor().execute(sql)
+            conns[name].commit()
+        except Exception:
+            logging(f"something wrong with data of {name}")
+        else:
+            continue
+
+    # 거래하기
+
+
+
+
+
 
     # while kiwoom.remained_data == True:
     #     time.sleep(TR_REQ_TIME_INTERVAL)
