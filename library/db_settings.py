@@ -2,6 +2,24 @@ import pymysql
 from library import cf
 
 def db_set(date):
+    connections = db_conn(date)
+
+    sql = f"create table if not exists `{date}`( \
+            date char(14) NOT NULL, \
+            open int, \
+            high int, \
+            low int, \
+            close int, \
+            volume int, \
+            PRIMARY KEY (date) \
+            );"
+
+    for conn in connections.values():
+        conn.cursor().execute(sql)
+
+    return connections
+
+def db_conn(date):
     connections = dict()
     connections['samsung_elec'] = pymysql.connect(host=cf.db_ip,
                            port=int(cf.db_port),
@@ -38,18 +56,4 @@ def db_set(date):
                            db='kakao',
                            charset='utf8mb4',
                            cursorclass=pymysql.cursors.DictCursor)
-
-    sql = f"create table if not exists `{date}`( \
-            date char(14) NOT NULL, \
-            open int, \
-            high int, \
-            low int, \
-            close int, \
-            volume int, \
-            PRIMARY KEY (date) \
-            );"
-
-    for conn in connections.values():
-        conn.cursor().execute(sql)
-
     return connections

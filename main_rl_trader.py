@@ -15,7 +15,7 @@ from dqn_agent import DQNAgent
 def get_data():
     # returns a T x 3 list of stock prices
     # each row is a different stock
-    df = pd.read_csv('2020march_to_august_test.csv')
+    df = pd.read_csv('2_data_test.csv')
     return df.values
 
 
