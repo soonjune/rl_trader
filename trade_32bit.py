@@ -21,21 +21,23 @@ if __name__ == "__main__":
     codes = ['005930', '066570', '012450', '035420', '035720']
     names = ['samsung_elec', 'lg_elec', 'hanwha_aero', 'naver', 'kakao']
 
+
     conns = db_settings.db_set(today)
 
     # opt10080 TR 요청 - 30초 단위 가격 가져오기(가장 최근으로)
     for code, name in zip(codes, names):
         data = defaultdict(list)
         ret = kiwoom.get_one_day_option_data(code, today)
-        sql = f"insert into `{ret.index[0][:-6]}` \
-         values ({ret.index[0]}, {ret['open'][0]}, {ret['high'][0]}, {ret['low'][0]}, {ret['close'][0]}, {ret['volume'][0]})"
-        try:
-            conns[name].cursor().execute(sql)
-            conns[name].commit()
-        except Exception as e:
-            logger.warn(e)
-        else:
-            continue
+        for i in range(899, -1, -1):
+            sql = f"insert into `{ret.index[i][:-6]}` \
+             values ({ret.index[i]}, {ret['open'][i]}, {ret['high'][i]}, {ret['low'][i]}, {ret['close'][i]}, {ret['volume'][i]})"
+            try:
+                conns[name].cursor().execute(sql)
+                conns[name].commit()
+            except Exception as e:
+                logger.warn(e)
+            else:
+                continue
 
     # 거래하기
 

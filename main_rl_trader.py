@@ -10,6 +10,9 @@ import pickle
 from sklearn.preprocessing import StandardScaler
 from utils import maybe_make_dir
 from dqn_agent import DQNAgent
+from library import db_settings
+
+import pymysql
 
 # Let's use samsung_elec, lg_elec, hanhwa_aero, naver, kakao
 def get_data():
@@ -36,6 +39,12 @@ def get_scaler(env):
     scaler.fit(states)
     return scaler
 
+
+def data_from_mysql(date):
+    conns = db_settings.db_conn(date)
+    names = ['samsung_elec', 'lg_elec', 'hanwha_aero', 'naver', 'kakao']
+    for i
+    sql =
 
 def get_scaler_for_real(states):
     # return scikit-learn scaler object to scale the states
@@ -222,6 +231,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.mode == "real":
+        date = datetime.today().strftime("%Y%m%d")
+        data = data_from_mysql(date)
         real_data = np.array([[46700,  69500,  32350, 137000, 129000]])
         start_money = 50000
         env = MultiStockEnv(real_data, start_money)

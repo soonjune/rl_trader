@@ -119,8 +119,8 @@ class Kiwoom(QAxWidget):
             pass
 
     def _opt10080(self, rqname, trcode):
-        # data_cnt = self._get_repeat_cnt(trcode, rqname)
-        for i in range(2):
+        data_cnt = self._get_repeat_cnt(trcode, rqname)
+        for i in range(data_cnt):
             date = self._get_comm_data(trcode, rqname, i, "체결시간")
             open = self._get_comm_data(trcode, rqname, i, "시가")
             high = self._get_comm_data(trcode, rqname, i, "고가")
