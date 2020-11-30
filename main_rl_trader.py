@@ -15,7 +15,7 @@ from dqn_agent import DQNAgent
 def get_data():
     # returns a T x 3 list of stock prices
     # each row is a different stock
-    df = pd.read_csv('black_month.csv')
+    df = pd.read_csv('2020march_to_august_test.csv')
     return df.values
 
 
@@ -36,6 +36,14 @@ def get_scaler(env):
     scaler.fit(states)
     return scaler
 
+
+def get_scaler_for_real(states):
+    # return scikit-learn scaler object to scale the states
+    # Note: you could also populate the replay buffer here
+    # run multiple episodes to make it more accurate
+    scaler = StandardScaler()
+    scaler.fit(states)
+    return scaler
 
 class MultiStockEnv:
     """
@@ -176,20 +184,27 @@ class MultiStockEnv:
 
 def play_one_episode(agent, env, is_train):
     # note: after transforming states are already 1xD
-    state = env.reset()
-    state = scaler.transform([state])
-    done = False
+    if is_train == 'real':
+        # state =             # 보유 수량 업데이트
+        # state = scaler.transform([state])
+        # act_values = predict(self.model, state)
+        # mysql db에 저장
+        return
+    else:
+        state = env.reset()
+        state = scaler.transform([state])
+        done = False
 
-    while not done:
-        action = agent.act(state)
-        next_state, reward, done, info = env.step(action)
-        next_state = scaler.transform([next_state])
-        if is_train == 'train':
-            agent.update_replay_memory(state, action, reward, next_state, done)
-            agent.replay(batch_size)
-        state = next_state
+        while not done:
+            action = agent.act(state)
+            next_state, reward, done, info = env.step(action)
+            next_state = scaler.transform([next_state])
+            if is_train == 'train':
+                agent.update_replay_memory(state, action, reward, next_state, done)
+                agent.replay(batch_size)
+            state = next_state
 
-    return info['cur_val']
+        return info['cur_val']
 
 
 if __name__ == '__main__':
@@ -203,65 +218,81 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-m', '--mode', type=str, required=True,
-                        help='either "train" or "test"')
+                        help='either "train" / "test" / "real"')
     args = parser.parse_args()
 
-    maybe_make_dir(models_folder)
-    maybe_make_dir(rewards_folder)
-
-    data = get_data() # time series data
-    n_timesteps, n_stocks = data.shape
-
-    ## 수정할 수도
-    n_train = n_timesteps
-
-    ## test mode
-    train_data = data[:n_train]
-    test_data = data[:]
-
-    env = MultiStockEnv(train_data, initial_investment)
-    state_size = env.state_dim
-    action_size = len(env.action_space)
-    agent = DQNAgent(state_size, action_size)
-    scaler = get_scaler(env)
-
-    # store the final value of the portfolio (end of episode)
-    portfolio_value = []
-
-    if args.mode == 'test':
-        # then load the previous scaler
-        with open(f'{models_folder}/scaler.pkl', 'rb') as f:
-            scaler = pickle.load(f)
-
-        # remake the env with test data
-        env = MultiStockEnv(test_data, initial_investment)
-
-        # make sure epsilon is not 1!
-        # no need to run multiple episodes if epsilon = 0, it's deterministic
-        agent.epsilon = 0
-        num_episodes = 1
-
-        # agent.epsilon = 0.01
-
-        # load trained weights
+    if args.mode == "real":
+        real_data = np.array([[46700,  69500,  32350, 137000, 129000]])
+        start_money = 50000
+        env = MultiStockEnv(real_data, start_money)
+        state_size = env.state_dim
+        action_size = len(env.action_space)
+        agent = DQNAgent(state_size, action_size)
+        state = np.array([0,0,0,0,0,46700,  69500,  32350, 137000, 129000,50000000], ndmin=2)
         agent.load(f'{models_folder}/dqn.ckpt')
 
-    # play the game num_episodes times
-    for e in range(num_episodes):
-        t0 = datetime.now()
-        val = play_one_episode(agent, env, args.mode)
-        dt = datetime.now() - t0
-        print(f"episode: {e + 1}/{num_episodes}, episode end value: {val}, duration: {dt}")
-        portfolio_value.append(val)  # append episode end portfolio value
+        action = agent.real_act(state)
+        action = env.action_list[action]
 
-    # save the weights when we are done
-    if args.mode == 'train':
-        # save the DQN
-        agent.save(f'{models_folder}/dqn.ckpt')
+        #mysql에 저장
 
-        # save the scaler
-        with open(f'{models_folder}/scaler.pkl', 'wb') as f:
-            pickle.dump(scaler, f)
+    else:
+        maybe_make_dir(models_folder)
+        maybe_make_dir(rewards_folder)
+
+        data = get_data() # time series data
+        n_timesteps, n_stocks = data.shape
+
+        ## 수정할 수도
+        n_train = n_timesteps
+
+        ## test mode
+        train_data = data[:n_train]
+        test_data = data[:]
+
+        env = MultiStockEnv(train_data, initial_investment)
+        state_size = env.state_dim
+        action_size = len(env.action_space)
+        agent = DQNAgent(state_size, action_size)
+        scaler = get_scaler(env)
+
+        # store the final value of the portfolio (end of episode)
+        portfolio_value = []
+
+        if args.mode == 'test':
+            # then load the previous scaler
+            with open(f'{models_folder}/scaler.pkl', 'rb') as f:
+                scaler = pickle.load(f)
+
+            # remake the env with test data
+            env = MultiStockEnv(test_data, initial_investment)
+
+            # make sure epsilon is not 1!
+            # no need to run multiple episodes if epsilon = 0, it's deterministic
+            agent.epsilon = 0
+            num_episodes = 1
+
+            # agent.epsilon = 0.01
+
+            # load trained weights
+            agent.load(f'{models_folder}/dqn.ckpt')
+
+        # play the game num_episodes times
+        for e in range(num_episodes):
+            t0 = datetime.now()
+            val = play_one_episode(agent, env, args.mode)
+            dt = datetime.now() - t0
+            print(f"episode: {e + 1}/{num_episodes}, episode end value: {val}, duration: {dt}")
+            portfolio_value.append(val)  # append episode end portfolio value
+
+        # save the weights when we are done
+        if args.mode == 'train':
+            # save the DQN
+            agent.save(f'{models_folder}/dqn.ckpt')
+
+            # save the scaler
+            with open(f'{models_folder}/scaler.pkl', 'wb') as f:
+                pickle.dump(scaler, f)
 
     # save portfolio value for each episode
     np.save(f'{rewards_folder}/{args.mode}.npy', portfolio_value)

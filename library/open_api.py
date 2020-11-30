@@ -54,20 +54,6 @@ class open_api(QAxWidget):
         self.account_info()
         self.variable_setting()
 
-        # open_api가 호출 되는 경우 (콜렉터, 모의투자, 실전투자) 의 경우는
-        # 아래 simulator_func_mysql 클래스를 호출 할 때 두번째 인자에 real을 보낸다.
-        self.sf = simulator_func_mysql(self.simul_num, 'real', self.db_name)
-        logger.debug("self.sf.sell_list_num : %s", self.sf.sell_list_num)
-
-        # 만약에 setting_data 테이블이 존재하지 않으면 구축 하는 로직
-        if not self.sf.is_simul_table_exist(self.db_name, "setting_data"):
-            self.init_db_setting_data()
-        else:
-            logger.debug("setting_data db 존재한다!!!")
-
-        # 여기서 invest_unit 설정함
-        self.sf_variable_setting()
-
     # 날짜 세팅
     def date_setting(self):
         self.today = datetime.datetime.today().strftime("%Y%m%d")
@@ -81,40 +67,9 @@ class open_api(QAxWidget):
     #     # rows 는 list안에 튜플이 있는 [()] 형태로 받아온다
     #     return self.engine_JB.execute(sql).fetchall()[0][0]
 
-    # simulator_func_mysql 에서 설정한 값을 가져오는 함수
-    def sf_variable_setting(self):
-        self.date_rows_yesterday = self.sf.get_recent_daily_buy_list_date()
-
-        if not self.sf.is_simul_table_exist(self.db_name, "all_item_db"):
-            logger.debug("all_item_db 없어서 생성!! init !! ")
-            self.invest_unit = 0
-            self.db_to_all_item(0, 0, 0, 0, 0, 0)
-            self.delete_all_item("0")
-        if not self.sf.is_simul_table_exist(self.db_name, "setting_data"):
-            logger.debug("setting_data 없어서 생성!!")
-
-            self.create_table_setting_date()
-
-        # setting_data에 invest_unit값이 설정 되어 있는지 확인
-        if not self.check_set_invest_unit():
-            # setting_data에 invest_unit 값이 설정 되어 있지 않으면 세팅
-            self.set_invest_unit()
-        # setting_data에 invest_unit값이 설정 되어 있으면 해당 값을 가져온다.
-        else:
-            self.invest_unit = self.get_invest_unit()
-            self.sf.invest_unit = self.invest_unit
-        # setting_data에 invest_unit값이 설정 되어 있는지 확인 하는 함수
-
     # 보유량 가져오는 함수
     def get_holding_amount(self, code):
-        logger.debug("get_holding_amount 함수에 들어왔습니다!")
-        sql = "select holding_amount from possessed_item where code = '%s' group by code"
-        rows = self.engine_JB.execute(sql % (code)).fetchall()
-        if len(rows):
-            return rows[0][0]
-        else:
-            logger.debug("get_holding_amount 비어있다 !")
-            return False
+        self.check_balance()
 
     # setting_data에 invest_unit값이 설정 되어 있는지 확인 하는 함수
     def check_set_invest_unit(self):
@@ -190,7 +145,7 @@ class open_api(QAxWidget):
     # 봇 데이터 베이스 존재 여부 확인 함수
     def is_database_exist(self):
         sql = "SELECT 1 FROM Information_schema.SCHEMATA WHERE SCHEMA_NAME = '{}'"
-        rows = self.engine_daily_buy_list.execute(sql.format(self.db_name)).fetchall()
+        rows = self.engine_actions.execute(sql.format(self.db_name)).fetchall()
         if len(rows):
             logger.debug("%s 데이터 베이스가 존재한다! ", self.db_name)
             return True
@@ -203,19 +158,11 @@ class open_api(QAxWidget):
         self.db_name = db_name
         logger.debug("db name !!! : %s", self.db_name)
 
-        self.engine_craw = create_engine(
+        self.engine_actions = create_engine(
             "mysql+mysqldb://" + cf.db_id + ":" + cf.db_passwd + "@" + cf.db_ip + ":" + cf.db_port + "/min_craw",
             encoding='utf-8')
-        self.engine_daily_craw = create_engine(
-            "mysql+mysqldb://" + cf.db_id + ":" + cf.db_passwd + "@" + cf.db_ip + ":" + cf.db_port + "/daily_craw",
-            encoding='utf-8')
-        self.engine_daily_buy_list = create_engine(
-            "mysql+mysqldb://" + cf.db_id + ":" + cf.db_passwd + "@" + cf.db_ip + ":" + cf.db_port + "/daily_buy_list",
-            encoding='utf-8')
 
-        event.listen(self.engine_craw, 'before_execute', escape_percentage, retval=True)
-        event.listen(self.engine_daily_craw, 'before_execute', escape_percentage, retval=True)
-        event.listen(self.engine_daily_buy_list, 'before_execute', escape_percentage, retval=True)
+        event.listen(self.engine_actions, 'before_execute', escape_percentage, retval=True)
 
         if not self.is_database_exist():
             self.create_database()

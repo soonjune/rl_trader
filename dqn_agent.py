@@ -10,7 +10,8 @@ device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 
 def predict(model, np_states):
-    model.eval()
+    # used in batch norm along with train()
+    # model.eval()
 
     with torch.no_grad():
         inputs = torch.from_numpy(np_states.astype(np.float32)).to(device)
@@ -20,7 +21,7 @@ def predict(model, np_states):
 
 
 def train_one_step(model, criterion, optimizer, inputs, targets):
-    model.train()
+    # model.train()
     # convert to tensors
     inputs = torch.from_numpy(inputs.astype(np.float32)).to(device)
     targets = torch.from_numpy(targets.astype(np.float32)).to(device)
@@ -59,6 +60,10 @@ class DQNAgent(object):
     def act(self, state):
         if np.random.rand() <= self.epsilon: # epsilon greedy
             return np.random.choice(self.action_size)
+        act_values = predict(self.model, state)
+        return np.argmax(act_values[0])  # returns (greedy) action
+
+    def real_act(self,state):
         act_values = predict(self.model, state)
         return np.argmax(act_values[0])  # returns (greedy) action
 
