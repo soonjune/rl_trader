@@ -2,7 +2,7 @@ import pymysql
 from library import cf
 
 def db_set(date):
-    connections = db_conn(date)
+    connections = db_conn()
 
     sql = f"create table if not exists `{date}`( \
             date char(14) NOT NULL, \
@@ -19,7 +19,7 @@ def db_set(date):
 
     return connections
 
-def db_conn(date):
+def db_conn():
     connections = dict()
     connections['samsung_elec'] = pymysql.connect(host=cf.db_ip,
                            port=int(cf.db_port),

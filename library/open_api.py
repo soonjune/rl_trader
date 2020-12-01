@@ -5,6 +5,8 @@ from collections import defaultdict
 from library.logging_pack import *
 from library import cf
 import sys
+import time
+from library.logging_pack import *
 
 class Kiwoom(QAxWidget):
     def __init__(self):
@@ -12,6 +14,8 @@ class Kiwoom(QAxWidget):
         self._create_kiwoom_instance()
         self._set_signal_slots()
         self.mod_gubun = 1 # 모의 투자
+        self.rq_count = 0
+
 
     def account_info(self):
         logger.debug("account_info 함수에 들어왔습니다!")
@@ -29,11 +33,11 @@ class Kiwoom(QAxWidget):
 
     def _set_signal_slots(self):
         try:
+            # 주문체결 시점에서 키움증권 서버가 발생시키는 OnReceiveChejanData 이벤트를 처리하는 메서드
+            self.OnReceiveChejanData.connect(self._receive_chejan_data)
             self.OnEventConnect.connect(self._event_connect)
             self.OnReceiveTrData.connect(self._receive_tr_data)
             self.OnReceiveMsg.connect(self._receive_msg)
-            # 주문체결 시점에서 키움증권 서버가 발생시키는 OnReceiveChejanData 이벤트를 처리하는 메서드
-            self.OnReceiveChejanData.connect(self._receive_chejan_data)
 
 
         except Exception as e:
@@ -45,10 +49,6 @@ class Kiwoom(QAxWidget):
 
     def _create_kiwoom_instance(self):
         self.setControl("KHOPENAPI.KHOpenAPICtrl.1")
-
-    def _set_signal_slots(self):
-        self.OnEventConnect.connect(self._event_connect)
-        self.OnReceiveTrData.connect(self._receive_tr_data)
 
     def comm_connect(self):
         self.dynamicCall("CommConnect()")
@@ -62,6 +62,18 @@ class Kiwoom(QAxWidget):
             print("disconnected")
 
         self.login_event_loop.exit()
+
+    def _receive_msg(self, sScrNo, sRQName, sTrCode, sMsg):
+        logger.debug("_receive_msg 함수에 들어왔습니다!")
+        # logger.debug("sScrNo!!!")
+        # logger.debug(sScrNo)
+        # logger.debug("sRQName!!!")
+        # logger.debug(sRQName)
+        # logger.debug("sTrCode!!!")
+        # logger.debug(sTrCode)
+        # logger.debug("sMsg!!!")
+        logger.debug(sMsg)
+
 
     def get_code_list_by_market(self, market):
         code_list = self.dynamicCall("GetCodeListByMarket(QString)", market)
@@ -96,31 +108,59 @@ class Kiwoom(QAxWidget):
         return ret
 
     def _receive_tr_data(self, screen_no, rqname, trcode, record_name, next, unused1, unused2, unused3, unused4):
+        # print("screen_no, rqname, trcode", screen_no, rqname, trcode)
         if next == '2':
             self.remained_data = True
         else:
             self.remained_data = False
-
-        if rqname == "opt10081_req":
+        # print("self.py_gubun!!", self.py_gubun)
+        if rqname == "opt10081_req" and self.py_gubun == "trader":
+            # logger.debug("opt10081_req trader!!!")
+            # logger.debug("Get an item info !!!!")
             self._opt10081(rqname, trcode)
-        elif rqname == "opt10080_req":
-            self._opt10080(rqname, trcode)
+        elif rqname == "opt10081_req" and self.py_gubun == "collector":
+            # logger.debug("opt10081_req collector!!!")
+            # logger.debug("Get an item info !!!!")
+            self.collector_opt10081(rqname, trcode)
         elif rqname == "opw00001_req":
             # logger.debug("opw00001_req!!!")
-            # logger.debug("Get deposit!!!")
+            # logger.debug("Get an de_deposit!!!")
             self._opw00001(rqname, trcode)
         elif rqname == "opw00018_req":
             # logger.debug("opw00018_req!!!")
             # logger.debug("Get the possessed item !!!!")
             self._opw00018(rqname, trcode)
+        elif rqname == "opt10074_req":
+            # logger.debug("opt10074_req!!!")
+            # logger.debug("Get the profit")
+            self._opt10074(rqname, trcode)
+        elif rqname == "opw00015_req":
+            # logger.debug("opw00015_req!!!")
+            # logger.debug("deal list!!!!")
+            self._opw00015(rqname, trcode)
+        elif rqname == "opt10076_req":
+            # logger.debug("opt10076_req")
+            # logger.debug("chegyul list!!!!")
+            self._opt10076(rqname, trcode)
+        elif rqname == "opt10073_req":
+            # logger.debug("opt10073_req")
+            # logger.debug("Get today profit !!!!")
+            self._opt10073(rqname, trcode)
+        elif rqname == "opt10080_req":
+            # logger.debug("opt10080_req!!!")
+            # logger.debug("Get an de_deposit!!!")
+            self._opt10080(rqname, trcode)
+        # except Exception as e:
+        #     logger.critical(e)
+
         try:
             self.tr_event_loop.exit()
         except AttributeError:
             pass
 
     def _opt10080(self, rqname, trcode):
-        data_cnt = self._get_repeat_cnt(trcode, rqname)
-        for i in range(data_cnt):
+        # data_cnt = self._get_repeat_cnt(trcode, rqname) # for previous day
+        for i in range(2):
             date = self._get_comm_data(trcode, rqname, i, "체결시간")
             open = self._get_comm_data(trcode, rqname, i, "시가")
             high = self._get_comm_data(trcode, rqname, i, "고가")
@@ -449,15 +489,84 @@ class Kiwoom(QAxWidget):
             logger.debug(
                 "_receive_chejan_data 에서 아무것도 해당 되지않음!")
 
+    #   미체결 정보
+    def _opt10076(self, rqname, trcode):
+        # try:
+        logger.debug("func in !!! _opt10076!!!!!!!!! ")
+        chegyul_fail_amount_temp = self._get_comm_data(trcode, rqname, 0, "미체결수량")
+        logger.debug("_opt10076 미체결수량!!!")
+        logger.debug(chegyul_fail_amount_temp)
+
+        # chegyul_fail_amount_temp 비어있으면 int 변환 불가
+        if chegyul_fail_amount_temp != "":
+            self.chegyul_fail_amount = int(chegyul_fail_amount_temp)
+
+        else:
+            self.chegyul_fail_amount = -1
+
+        if self.chegyul_fail_amount != "":
+            self.chegyul_name = self._get_comm_data(trcode, rqname, 0, "종목명")
+            logger.debug("_opt10076 종목명!!!")
+            logger.debug(self.chegyul_name)
+
+            self.chegyul_guboon = self._get_comm_data(trcode, rqname, 0, "주문구분")
+            logger.debug("_opt10076 주문구분!!!")
+            logger.debug(self.chegyul_guboon)
+
+            self.chegyul_state = self._get_comm_data(trcode, rqname, 0, "주문상태")
+            logger.debug("_opt10076 주문상태!!!")
+            logger.debug(self.chegyul_state)
+
+
+        else:
+            logger.debug("오늘 산놈이 아닌데 chegyul_check 가 1이 된 종목이다!")
+
+
     # openapi 매수 요청
-    def send_order(self, rqname, screen_no, acc_no, order_type, code, quantity, price, hoga, order_no):
-        logger.debug("send_order!!!")
-        try:
-            self.exit_check()
-            self.dynamicCall("SendOrder(QString, QString, QString, int, QString, int, int, QString, QString)",
-                             [rqname, screen_no, acc_no, order_type, code, quantity, price, hoga, order_no])
-        except Exception as e:
-            logger.critical(e)
+    def send_order(self, request_name, screen_no, account_no, order_type, code, qty, price, hoga_type, origin_order_no):
+        """
+        주식 주문 메서드
+
+        send_order() 메소드 실행시,
+        OnReceiveMsg, OnReceiveTrData, OnReceiveChejanData 이벤트가 발생한다.
+        이 중, 주문에 대한 결과 데이터를 얻기 위해서는 OnReceiveChejanData 이벤트를 통해서 처리한다.
+        OnReceiveTrData 이벤트를 통해서는 주문번호를 얻을 수 있는데, 주문후 이 이벤트에서 주문번호가 ''공백으로 전달되면,
+        주문접수 실패를 의미한다.
+
+        :param request_name: string - 주문 요청명(사용자 정의)
+        :param screen_no: string - 화면번호(4자리)
+        :param account_no: string - 계좌번호(10자리)
+        :param order_type: int - 주문유형(1: 신규매수, 2: 신규매도, 3: 매수취소, 4: 매도취소, 5: 매수정정, 6: 매도정정)
+        :param code: string - 종목코드
+        :param qty: int - 주문수량
+        :param price: int - 주문단가
+        :param hoga_type: string - 거래구분(00: 지정가, 03: 시장가, 05: 조건부지정가, 06: 최유리지정가, 그외에는 api 문서참조)
+        :param origin_order_no: string - 원주문번호(신규주문에는 공백, 정정및 취소주문시 원주문번호르 입력합니다.)
+        """
+        if not (isinstance(request_name, str)
+                and isinstance(screen_no, str)
+                and isinstance(account_no, str)
+                and isinstance(order_type, int)
+                and isinstance(code, str)
+                and isinstance(qty, int)
+                and isinstance(price, int)
+                and isinstance(hoga_type, str)
+                and isinstance(origin_order_no, str)):
+            raise ParameterTypeError()
+
+        return_code = self.dynamicCall("SendOrder(QString, QString, QString, int, QString, int, int, QString, QString)",
+                                       [request_name, screen_no, account_no, order_type, code, qty, price, hoga_type,
+                                        origin_order_no])
+
+        if return_code != ReturnCode.OP_ERR_NONE:
+            raise KiwoomProcessingError("send_order(): " + ReturnCode.CAUSE[return_code])
+
+        self.OnReceiveChejanData.connect(self._receive_chejan_data)
+
+    def GetChejanData(self, nFid):
+        cmd = 'GetChejanData("%s")' % nFid
+        ret = self.dynamicCall(cmd)
+        return ret
 
     # # 체결 데이터를 가져오는 메서드인 GetChejanData를 사용하는
     # get_chejan_data 메서드
@@ -469,3 +578,467 @@ class Kiwoom(QAxWidget):
             return ret
         except Exception as e:
             logger.critical(e)
+
+
+    def chegyul_check(self, code):
+        logger.debug("chegyul_check code!!!")
+        logger.debug(code)
+        self.set_input_value("종목코드", code)
+        # 	조회구분 = 0:전체, 1:종목
+        self.set_input_value("조회구분", 1)
+        # SetInputValue("조회구분"	,  "입력값 2");
+        # 	계좌번호 = 전문 조회할 보유계좌번호
+        self.set_input_value("계좌번호", self.account_number)
+        # 	비밀번호 = 사용안함(공백)
+        # 	SetInputValue("비밀번호"	,  "입력값 5");
+        self.comm_rq_data("opt10076_req", "opt10076", 0, "0350")
+
+        if self.chegyul_fail_amount == -2:
+            # opt10076_req 로 comm rq data 가는 도중에 receive chejan 걸려서 chegyul_fail_amount를 못가져옴. 이럴 때는 다시 돌려
+            # 만약 여기서 두번 돌려서 시간낭비가 심하다고 판단 되는 경우에는 그냥 pass로 해도 상관없을듯 로그찍어봐
+            logger.debug(
+                "opt10076_req 로 comm rq data 가는 도중에 receive chejan 걸려서 chegyul_fail_amount를 못가져옴. 이럴 때는 다시 돌려")
+
+            self.chegyul_check()
+        elif self.chegyul_fail_amount == -1:
+            # logger.debug("!!!!!!!!!!!!!!!!!!!!!!!!!!logger.debug _receive_chejan_data 에서 code가 불량이다!!!!!!!!!")
+            logger.debug(
+                "!!!!!!!!!!!!!!!!!!!!!!!!!!l이게 아마 어제 미체결 인놈들같은데 ! update 한번해줘보자 나중에 안되면 수정 , 이게 아마 이미 체결 된놈인듯 어제 체결 돼서 조회가 안되는거인듯")
+            # self.engine_JB.commit()
+
+        elif self.chegyul_fail_amount == 0:
+            logger.debug("체결!!!!! 이건 오늘 산놈들에 대해서만 조회가 가능한듯 ")
+
+            # 여기좀 간결하게 바꿔봐
+            # 제일 최근 종목하나만 체결정보 업데이트하는거다
+            # self.jackbot_db_con.commit()
+
+        else:
+            logger.debug("아직 매수 혹은 매도 중인 놈이다 미체결!!!!!!!!!!!!!!!!!!!!!!!!!")
+            logger.debug("self.chegyul_fail_amount!!")
+            logger.debug(self.chegyul_fail_amount)
+
+    # openapi 조회 카운트를 체크 하고 cf.max_api_call 횟수 만큼 카운트 되면 봇이 꺼지게 하는 함수
+    def exit_check(self):
+        time.sleep(cf.TR_REQ_TIME_INTERVAL)
+        self.rq_count += 1
+        # openapi 조회 count 출력 (수정): 항상 출력이 아니라 45, 100으로 나눠질 때만
+        if self.rq_count % 45 == 0:
+            logger.debug(self.rq_count)
+            time.sleep(cf.TR_REQ_TIME_INTERVAL_LONG)
+        if self.rq_count % 100 == 0:
+            logger.debug(self.rq_count)
+            time.sleep(cf.TR_REQ_TIME_INTERVAL_LONG * 2)
+        if self.rq_count == cf.max_api_call:
+            sys.exit(1)
+
+
+class ParameterTypeError(Exception):
+    """ 파라미터 타입이 일치하지 않을 경우 발생하는 예외 """
+
+    def __init__(self, msg="파라미터 타입이 일치하지 않습니다."):
+        self.msg = msg
+
+    def __str__(self):
+        return self.msg
+
+class ParameterTypeError(Exception):
+    """ 파라미터 타입이 일치하지 않을 경우 발생하는 예외 """
+
+    def __init__(self, msg="파라미터 타입이 일치하지 않습니다."):
+        self.msg = msg
+
+    def __str__(self):
+        return self.msg
+
+
+class ParameterValueError(Exception):
+    """ 파라미터로 사용할 수 없는 값을 사용할 경우 발생하는 예외 """
+
+    def __init__(self, msg="파라미터로 사용할 수 없는 값 입니다."):
+        self.msg = msg
+
+    def __str__(self):
+        return self.msg
+
+
+class KiwoomProcessingError(Exception):
+    """ 키움에서 처리실패에 관련된 리턴코드를 받았을 경우 발생하는 예외 """
+
+    def __init__(self, msg="처리 실패"):
+        self.msg = msg
+
+    def __str__(self):
+        return self.msg
+
+    def __repr__(self):
+        return self.msg
+
+
+class KiwoomConnectError(Exception):
+    """ 키움서버에 로그인 상태가 아닐 경우 발생하는 예외 """
+
+    def __init__(self, msg="로그인 여부를 확인하십시오"):
+        self.msg = msg
+
+    def __str__(self):
+        return self.msg
+
+
+class ReturnCode(object):
+    """ 키움 OpenApi+ 함수들이 반환하는 값 """
+
+    OP_ERR_NONE = 0  # 정상처리
+    OP_ERR_FAIL = -10  # 실패
+    OP_ERR_LOGIN = -100  # 사용자정보교환실패
+    OP_ERR_CONNECT = -101  # 서버접속실패
+    OP_ERR_VERSION = -102  # 버전처리실패
+    OP_ERR_FIREWALL = -103  # 개인방화벽실패
+    OP_ERR_MEMORY = -104  # 메모리보호실패
+    OP_ERR_INPUT = -105  # 함수입력값오류
+    OP_ERR_SOCKET_CLOSED = -106  # 통신연결종료
+    OP_ERR_SISE_OVERFLOW = -200  # 시세조회과부하
+    OP_ERR_RQ_STRUCT_FAIL = -201  # 전문작성초기화실패
+    OP_ERR_RQ_STRING_FAIL = -202  # 전문작성입력값오류
+    OP_ERR_NO_DATA = -203  # 데이터없음
+    OP_ERR_OVER_MAX_DATA = -204  # 조회가능한종목수초과
+    OP_ERR_DATA_RCV_FAIL = -205  # 데이터수신실패
+    OP_ERR_OVER_MAX_FID = -206  # 조회가능한FID수초과
+    OP_ERR_REAL_CANCEL = -207  # 실시간해제오류
+    OP_ERR_ORD_WRONG_INPUT = -300  # 입력값오류
+    OP_ERR_ORD_WRONG_ACCTNO = -301  # 계좌비밀번호없음
+    OP_ERR_OTHER_ACC_USE = -302  # 타인계좌사용오류
+    OP_ERR_MIS_2BILL_EXC = -303  # 주문가격이20억원을초과
+    OP_ERR_MIS_5BILL_EXC = -304  # 주문가격이50억원을초과
+    OP_ERR_MIS_1PER_EXC = -305  # 주문수량이총발행주수의1%초과오류
+    OP_ERR_MIS_3PER_EXC = -306  # 주문수량이총발행주수의3%초과오류
+    OP_ERR_SEND_FAIL = -307  # 주문전송실패
+    OP_ERR_ORD_OVERFLOW = -308  # 주문전송과부하
+    OP_ERR_MIS_300CNT_EXC = -309  # 주문수량300계약초과
+    OP_ERR_MIS_500CNT_EXC = -310  # 주문수량500계약초과
+    OP_ERR_ORD_WRONG_ACCTINFO = -340  # 계좌정보없음
+    OP_ERR_ORD_SYMCODE_EMPTY = -500  # 종목코드없음
+
+    CAUSE = {
+        0: '정상처리',
+        -10: '실패',
+        -100: '사용자정보교환실패',
+        -102: '버전처리실패',
+        -103: '개인방화벽실패',
+        -104: '메모리보호실패',
+        -105: '함수입력값오류',
+        -106: '통신연결종료',
+        -200: '시세조회과부하',
+        -201: '전문작성초기화실패',
+        -202: '전문작성입력값오류',
+        -203: '데이터없음',
+        -204: '조회가능한종목수초과',
+        -205: '데이터수신실패',
+        -206: '조회가능한FID수초과',
+        -207: '실시간해제오류',
+        -300: '입력값오류',
+        -301: '계좌비밀번호없음',
+        -302: '타인계좌사용오류',
+        -303: '주문가격이20억원을초과',
+        -304: '주문가격이50억원을초과',
+        -305: '주문수량이총발행주수의1%초과오류',
+        -306: '주문수량이총발행주수의3%초과오류',
+        -307: '주문전송실패',
+        -308: '주문전송과부하',
+        -309: '주문수량300계약초과',
+        -310: '주문수량500계약초과',
+        -340: '계좌정보없음',
+        -500: '종목코드없음'
+    }
+
+
+class FidList(object):
+    """ receiveChejanData() 이벤트 메서드로 전달되는 FID 목록 """
+
+    CHEJAN = {
+        9201: '계좌번호',
+        9203: '주문번호',
+        9205: '관리자사번',
+        9001: '종목코드',
+        912: '주문업무분류',
+        913: '주문상태',
+        302: '종목명',
+        900: '주문수량',
+        901: '주문가격',
+        902: '미체결수량',
+        903: '체결누계금액',
+        904: '원주문번호',
+        905: '주문구분',
+        906: '매매구분',
+        907: '매도수구분',
+        908: '주문/체결시간',
+        909: '체결번호',
+        910: '체결가',
+        911: '체결량',
+        10: '현재가',
+        27: '(최우선)매도호가',
+        28: '(최우선)매수호가',
+        914: '단위체결가',
+        915: '단위체결량',
+        938: '당일매매수수료',
+        939: '당일매매세금',
+        919: '거부사유',
+        920: '화면번호',
+        921: '921',
+        922: '922',
+        923: '923',
+        949: '949',
+        10010: '10010',
+        917: '신용구분',
+        916: '대출일',
+        930: '보유수량',
+        931: '매입단가',
+        932: '총매입가',
+        933: '주문가능수량',
+        945: '당일순매수수량',
+        946: '매도/매수구분',
+        950: '당일총매도손일',
+        951: '예수금',
+        307: '기준가',
+        8019: '손익율',
+        957: '신용금액',
+        958: '신용이자',
+        959: '담보대출수량',
+        924: '924',
+        918: '만기일',
+        990: '당일실현손익(유가)',
+        991: '당일신현손익률(유가)',
+        992: '당일실현손익(신용)',
+        993: '당일실현손익률(신용)',
+        397: '파생상품거래단위',
+        305: '상한가',
+        306: '하한가'
+    }
+
+
+class RealType(object):
+    REALTYPE = {
+        '주식시세': {
+            10: '현재가',
+            11: '전일대비',
+            12: '등락율',
+            27: '최우선매도호가',
+            28: '최우선매수호가',
+            13: '누적거래량',
+            14: '누적거래대금',
+            16: '시가',
+            17: '고가',
+            18: '저가',
+            25: '전일대비기호',
+            26: '전일거래량대비',
+            29: '거래대금증감',
+            30: '거일거래량대비',
+            31: '거래회전율',
+            32: '거래비용',
+            311: '시가총액(억)'
+        },
+
+        '주식체결': {
+            20: '체결시간(HHMMSS)',
+            10: '체결가',
+            11: '전일대비',
+            12: '등락율',
+            27: '최우선매도호가',
+            28: '최우선매수호가',
+            15: '체결량',
+            13: '누적체결량',
+            14: '누적거래대금',
+            16: '시가',
+            17: '고가',
+            18: '저가',
+            25: '전일대비기호',
+            26: '전일거래량대비',
+            29: '거래대금증감',
+            30: '전일거래량대비',
+            31: '거래회전율',
+            32: '거래비용',
+            228: '체결강도',
+            311: '시가총액(억)',
+            290: '장구분',
+            691: 'KO접근도'
+        },
+
+        '주식호가잔량': {
+            21: '호가시간',
+            41: '매도호가1',
+            61: '매도호가수량1',
+            81: '매도호가직전대비1',
+            51: '매수호가1',
+            71: '매수호가수량1',
+            91: '매수호가직전대비1',
+            42: '매도호가2',
+            62: '매도호가수량2',
+            82: '매도호가직전대비2',
+            52: '매수호가2',
+            72: '매수호가수량2',
+            92: '매수호가직전대비2',
+            43: '매도호가3',
+            63: '매도호가수량3',
+            83: '매도호가직전대비3',
+            53: '매수호가3',
+            73: '매수호가수량3',
+            93: '매수호가직전대비3',
+            44: '매도호가4',
+            64: '매도호가수량4',
+            84: '매도호가직전대비4',
+            54: '매수호가4',
+            74: '매수호가수량4',
+            94: '매수호가직전대비4',
+            45: '매도호가5',
+            65: '매도호가수량5',
+            85: '매도호가직전대비5',
+            55: '매수호가5',
+            75: '매수호가수량5',
+            95: '매수호가직전대비5',
+            46: '매도호가6',
+            66: '매도호가수량6',
+            86: '매도호가직전대비6',
+            56: '매수호가6',
+            76: '매수호가수량6',
+            96: '매수호가직전대비6',
+            47: '매도호가7',
+            67: '매도호가수량7',
+            87: '매도호가직전대비7',
+            57: '매수호가7',
+            77: '매수호가수량7',
+            97: '매수호가직전대비7',
+            48: '매도호가8',
+            68: '매도호가수량8',
+            88: '매도호가직전대비8',
+            58: '매수호가8',
+            78: '매수호가수량8',
+            98: '매수호가직전대비8',
+            49: '매도호가9',
+            69: '매도호가수량9',
+            89: '매도호가직전대비9',
+            59: '매수호가9',
+            79: '매수호가수량9',
+            99: '매수호가직전대비9',
+            50: '매도호가10',
+            70: '매도호가수량10',
+            90: '매도호가직전대비10',
+            60: '매수호가10',
+            80: '매수호가수량10',
+            100: '매수호가직전대비10',
+            121: '매도호가총잔량',
+            122: '매도호가총잔량직전대비',
+            125: '매수호가총잔량',
+            126: '매수호가총잔량직전대비',
+            23: '예상체결가',
+            24: '예상체결수량',
+            128: '순매수잔량(총매수잔량-총매도잔량)',
+            129: '매수비율',
+            138: '순매도잔량(총매도잔량-총매수잔량)',
+            139: '매도비율',
+            200: '예상체결가전일종가대비',
+            201: '예상체결가전일종가대비등락율',
+            238: '예상체결가전일종가대비기호',
+            291: '예상체결가',
+            292: '예상체결량',
+            293: '예상체결가전일대비기호',
+            294: '예상체결가전일대비',
+            295: '예상체결가전일대비등락율',
+            13: '누적거래량',
+            299: '전일거래량대비예상체결률',
+            215: '장운영구분'
+        },
+
+        '장시작시간': {
+            215: '장운영구분(0:장시작전, 2:장종료전, 3:장시작, 4,8:장종료, 9:장마감)',
+            20: '시간(HHMMSS)',
+            214: '장시작예상잔여시간'
+        },
+
+        '업종지수': {
+            20: '체결시간',
+            10: '현재가',
+            11: '전일대비',
+            12: '등락율',
+            15: '거래량',
+            13: '누적거래량',
+            14: '누적거래대금',
+            16: '시가',
+            17: '고가',
+            18: '저가',
+            25: '전일대비기호',
+            26: '전일거래량대비(계약,주)'
+        },
+
+        '업종등락': {
+            20: '체결시간',
+            252: '상승종목수',
+            251: '상한종목수',
+            253: '보합종목수',
+            255: '하락종목수',
+            254: '하한종목수',
+            13: '누적거래량',
+            14: '누적거래대금',
+            10: '현재가',
+            11: '전일대비',
+            12: '등락율',
+            256: '거래형성종목수',
+            257: '거래형성비율',
+            25: '전일대비기호'
+        },
+
+        '주문체결': {
+            9201: '계좌번호',
+            9203: '주문번호',
+            9205: '관리자사번',
+            9001: '종목코드',
+            912: '주문분류(jj:주식주문)',
+            913: '주문상태(10:원주문, 11:정정주문, 12:취소주문, 20:주문확인, 21:정정확인, 22:취소확인, 90,92:주문거부)',
+            302: '종목명',
+            900: '주문수량',
+            901: '주문가격',
+            902: '미체결수량',
+            903: '체결누계금액',
+            904: '원주문번호',
+            905: '주문구분(+:현금매수, -:현금매도)',
+            906: '매매구분(보통, 시장가등)',
+            907: '매도수구분(1:매도, 2:매수)',
+            908: '체결시간(HHMMSS)',
+            909: '체결번호',
+            910: '체결가',
+            911: '체결량',
+            10: '체결가',
+            27: '최우선매도호가',
+            28: '최우선매수호가',
+            914: '단위체결가',
+            915: '단위체결량',
+            938: '당일매매수수료',
+            939: '당일매매세금'
+        },
+
+        '잔고': {
+            9201: '계좌번호',
+            9001: '종목코드',
+            302: '종목명',
+            10: '현재가',
+            930: '보유수량',
+            931: '매입단가',
+            932: '총매입가',
+            933: '주문가능수량',
+            945: '당일순매수량',
+            946: '매도매수구분',
+            950: '당일총매도손익',
+            951: '예수금',
+            27: '최우선매도호가',
+            28: '최우선매수호가',
+            307: '기준가',
+            8019: '손익율'
+        },
+
+        '주식시간외호가': {
+            21: '호가시간(HHMMSS)',
+            131: '시간외매도호가총잔량',
+            132: '시간외매도호가총잔량직전대비',
+            135: '시간외매수호가총잔량',
+            136: '시간외매수호가총잔량직전대비'
+        }
+    }

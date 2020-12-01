@@ -1,5 +1,10 @@
 import numpy as np
 import pandas as pd
+from pandas.tseries.offsets import BDay
+from sqlalchemy import create_engine
+from sqlalchemy.engine.url import URL
+from library import cf
+from library.logging_pack import *
 
 from datetime import datetime
 import itertools
@@ -40,11 +45,36 @@ def get_scaler(env):
     return scaler
 
 
-def data_from_mysql(date):
-    conns = db_settings.db_conn(date)
+def stats_from_mysql(date):
+    conns = db_settings.db_conn()
     names = ['samsung_elec', 'lg_elec', 'hanwha_aero', 'naver', 'kakao']
-    for i
-    sql =
+    try:
+        count = count_rows(conns['samsung_elec'], date.strftime("%Y%m%d"))
+        while count < 100:
+            date = date - BDay(1)
+            count = count_rows(conns['samsung_elec'], date.strftime("%Y%m%d"))
+    except Exception as e:
+        date = date - BDay(1)
+
+    sql = f'select date, close from `{date.strftime("%Y%m%d")}`'
+    dfs = []
+    for name in names:
+        dfs.append(pd.read_sql(sql, con=conns[name]))
+    result = pd.concat(dfs,axis=1,join='inner')
+
+    return result['close'].to_numpy()
+
+
+    # for name in names:
+    #     sql = f"select count(*) from "
+
+def count_rows(con, date):
+    cursor = con.cursor()
+    cursor.execute(f'select date from `{date}`')
+    count = len(cursor.fetchall())
+    cursor.close()
+    return count
+
 
 def get_scaler_for_real(states):
     # return scikit-learn scaler object to scale the states
@@ -53,6 +83,25 @@ def get_scaler_for_real(states):
     scaler = StandardScaler()
     scaler.fit(states)
     return scaler
+
+# def get_latest_data(date):
+
+
+def save_action(action):
+    con = pymysql.connect(host=cf.db_ip,
+                   port=int(cf.db_port),
+                   user=cf.db_id,
+                   password=cf.db_passwd,
+                   db='rl_actions',
+                   charset='utf8mb4',
+                   cursorclass=pymysql.cursors.DictCursor)
+    sql = "insert into actions values({})".format(','.join(action))
+    try:
+        con.cursor().execute(sql)
+        con.commit()
+    except Exception as e:
+        logger.warn(e)
+
 
 class MultiStockEnv:
     """
@@ -232,20 +281,25 @@ if __name__ == '__main__':
 
     if args.mode == "real":
         date = datetime.today().strftime("%Y%m%d")
-        data = data_from_mysql(date)
+        data = stats_from_mysql(datetime.today())
         real_data = np.array([[46700,  69500,  32350, 137000, 129000]])
+        #[TODO] 보유 현금 불러오기
         start_money = 50000
-        env = MultiStockEnv(real_data, start_money)
+        env = MultiStockEnv(data, start_money)
         state_size = env.state_dim
         action_size = len(env.action_space)
         agent = DQNAgent(state_size, action_size)
+        scaler = get_scaler(env)
+        #[TODO] 현재 state 불러오기
         state = np.array([0,0,0,0,0,46700,  69500,  32350, 137000, 129000,50000000], ndmin=2)
+        state = scaler.transform(state)
         agent.load(f'{models_folder}/dqn.ckpt')
 
         action = agent.real_act(state)
         action = env.action_list[action]
 
         #mysql에 저장
+        save_action(action)
 
     else:
         maybe_make_dir(models_folder)
