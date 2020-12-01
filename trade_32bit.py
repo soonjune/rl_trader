@@ -12,9 +12,7 @@ TR_REQ_TIME_INTERVAL = 0.2
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    kiwoom = open_api.Kiwoom()
-    kiwoom.comm_connect()
-    kiwoom.account_info()
+    kiwoom = open_api.open_api()
 
     # 잔고 data 가져오기
 
@@ -24,7 +22,7 @@ if __name__ == "__main__":
     #매수 주문
     # 03 시장가 매수
     # 4번째 인자: 1: 신규매수 / 2: 신규매도 / 3:매수취소 / 4:매도취소 / 5: 매수정정 / 6:매도정정
-    kiwoom.send_order("자동매수주문", "0101", kiwoom.account_number, 1, '005930', int(5), 0, "03", "")
+    kiwoom.send_order("send_order_req", "0101", kiwoom.account_number, 1, '012450', int(5), 0, "03", "")
     print("주문 접수")
 
     #매도 주문
@@ -32,8 +30,8 @@ if __name__ == "__main__":
     # 2 : 신규매도
     # 0 : price 인데 시장가니까 0으로
     # get_sell_num : 종목 보유 수량
-    # kiwoom.send_order("send_order_req", "0101", kiwoom.account_number, 2, get_sell_code,
-    #                          get_sell_num, 0, "03", "")
+    kiwoom.send_order("send_order_req", "0101", kiwoom.account_number, 2, '005930',
+                             10, 0, "03", "")
 
     today = date.today().strftime("%Y%m%d")
     codes = ['005930', '066570', '012450', '035420', '035720']
