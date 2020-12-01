@@ -46,7 +46,7 @@ def get_scaler(env):
 
 
 def stats_from_mysql(date):
-    conns = db_settings.db_conn()
+    conns = db_settings.db_conns()
     names = ['samsung_elec', 'lg_elec', 'hanwha_aero', 'naver', 'kakao']
     try:
         count = count_rows(conns['samsung_elec'], date.strftime("%Y%m%d"))
@@ -282,24 +282,39 @@ if __name__ == '__main__':
     if args.mode == "real":
         date = datetime.today().strftime("%Y%m%d")
         data = stats_from_mysql(datetime.today())
-        real_data = np.array([[46700,  69500,  32350, 137000, 129000]])
-        #[TODO] 보유 현금 불러오기
-        start_money = 50000
-        env = MultiStockEnv(data, start_money)
-        state_size = env.state_dim
-        action_size = len(env.action_space)
-        agent = DQNAgent(state_size, action_size)
-        scaler = get_scaler(env)
-        #[TODO] 현재 state 불러오기
-        state = np.array([0,0,0,0,0,46700,  69500,  32350, 137000, 129000,50000000], ndmin=2)
-        state = scaler.transform(state)
-        agent.load(f'{models_folder}/dqn.ckpt')
+        sql = "select * from states ORDER BY id DESC LIMIT 1"
+        state_conn = db_settings.db_connect('saved_states')
+        action_conn = db_settings.db_connect('rl_actions')
 
-        action = agent.real_act(state)
-        action = env.action_list[action]
+        prev_state = False
+        while(datetime.now().strftime("%H:%M:%S") <= "15:30:00"):
+            with state_conn.cursor() as cursor:
+                cursor.execute(sql)
+                state = cursor.fetchone()
+            if not state:
+                continue
+            if prev_state and prev_state == state:
+                continue
+            start_money = state['d2_deposit']
+            env = MultiStockEnv(data, start_money)
+            state_size = env.state_dim
+            action_size = len(env.action_space)
+            agent = DQNAgent(state_size, action_size)
+            scaler = get_scaler(env)
+            # state 재가공
+            state_formatted = np.array(list(state.values())[1:], ndmin=2)
+            state_formatted = scaler.transform(state_formatted)
+            agent.load(f'{models_folder}/dqn.ckpt')
 
-        #mysql에 저장
-        save_action(action)
+            action = agent.real_act(state_formatted)
+            action = env.action_list[action]
+            #mysql에 저장
+            sql_act = "insert into actions values(NULL,{})".format(','.join(str(v) for v in action))
+            action_conn.cursor().execute(sql_act)
+            action_conn.commit()
+
+            prev_state = state
+
 
     else:
         maybe_make_dir(models_folder)
@@ -359,5 +374,5 @@ if __name__ == '__main__':
             with open(f'{models_folder}/scaler.pkl', 'wb') as f:
                 pickle.dump(scaler, f)
 
-    # save portfolio value for each episode
-    np.save(f'{rewards_folder}/{args.mode}.npy', portfolio_value)
+        # save portfolio value for each episode
+        np.save(f'{rewards_folder}/{args.mode}.npy', portfolio_value)

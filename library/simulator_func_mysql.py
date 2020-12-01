@@ -137,16 +137,6 @@ class simulator_func_mysql:
             self.db_conn.cursor().execute(sql % (self.db_name))
             self.db_conn.commit()
 
-    # 데이터베이스의 존재 유무를 파악하는 함수.
-    def is_simul_database_exist(self):
-        sql = "SELECT 1 FROM Information_schema.SCHEMATA WHERE SCHEMA_NAME = '%s'"
-        rows = self.engine_daily_buy_list.execute(sql % (self.db_name)).fetchall()
-        print("rows : ", rows)
-        if len(rows):
-            return True
-        else:
-            return False
-
     # 오늘 날짜를 설정하는 함수
     def date_setting(self):
         self.today = datetime.datetime.today().strftime("%Y%m%d%H%M")
