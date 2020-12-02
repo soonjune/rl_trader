@@ -1,0 +1,1519 @@
+DEBUG:crumbs:account_info 함수에 들어왔습니다!
+DEBUG:crumbs:계좌번호 : 8151199911
+DEBUG:crumbs:account_info 함수에 들어왔습니다!
+DEBUG:crumbs:계좌번호 : 8151199911
+DEBUG:crumbs:account_info 함수에 들어왔습니다!
+DEBUG:crumbs:계좌번호 : 8151199911
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111330' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+DEBUG:crumbs:45
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111430' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202111430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111430' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111430' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111430' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202111500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111500' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111500' for key '20201202.PRIMARY'")
+DEBUG:crumbs:90
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111500' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:100
+WARNING:crumbs:(1062, "Duplicate entry '20201202111500' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111530' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111530' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111530' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111530' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202111530' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111530' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111530' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111530' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111600' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111600' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111600' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111600' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111600' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111600' for key '20201202.PRIMARY'")
+DEBUG:crumbs:135
+WARNING:crumbs:(1062, "Duplicate entry '20201202111600' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111600' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111600' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111600' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111600' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111630' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202111630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111630' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111630' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111700' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111700' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111700' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111700' for key '20201202.PRIMARY'")
+DEBUG:crumbs:180
+WARNING:crumbs:(1062, "Duplicate entry '20201202111700' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111700' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111700' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111700' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111700' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202111730' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111730' for key '20201202.PRIMARY'")
+DEBUG:crumbs:200
+WARNING:crumbs:(1062, "Duplicate entry '20201202111730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111730' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111730' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111730' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+DEBUG:crumbs:225
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111830' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202111830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111830' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111830' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111830' for key '20201202.PRIMARY'")
+DEBUG:crumbs:270
+WARNING:crumbs:(1062, "Duplicate entry '20201202111830' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202111900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111900' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111900' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202111900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111900' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111900' for key '20201202.PRIMARY'")
+DEBUG:crumbs:300
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111930' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111930' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:315
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202111930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202111930' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202112000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112000' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112000' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112000' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112000' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112030' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112030' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112030' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112030' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112030' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112030' for key '20201202.PRIMARY'")
+DEBUG:crumbs:360
+WARNING:crumbs:(1062, "Duplicate entry '20201202112030' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112030' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112100' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112100' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112100' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112100' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112100' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112100' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112100' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112100' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112100' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112100' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112130' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+DEBUG:crumbs:400
+WARNING:crumbs:(1062, "Duplicate entry '20201202112130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112130' for key '20201202.PRIMARY'")
+DEBUG:crumbs:405
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112200' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202112200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112200' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112200' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202112230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112230' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112230' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112230' for key '20201202.PRIMARY'")
+DEBUG:crumbs:450
+WARNING:crumbs:(1062, "Duplicate entry '20201202112230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112230' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112230' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112300' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112300' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112300' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202112330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112330' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112330' for key '20201202.PRIMARY'")
+DEBUG:crumbs:495
+WARNING:crumbs:(1062, "Duplicate entry '20201202112330' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112330' for key '20201202.PRIMARY'")
+DEBUG:crumbs:500
+WARNING:crumbs:(1062, "Duplicate entry '20201202112330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112330' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112330' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+DEBUG:crumbs:540
+WARNING:crumbs:(1062, "Duplicate entry '20201202112400' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112430' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112430' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112430' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202112500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112430' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112500' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112500' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112500' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112500' for key '20201202.PRIMARY'")
+DEBUG:crumbs:585
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202112530' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112530' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112530' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112530' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112530' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112530' for key '20201202.PRIMARY'")
+DEBUG:crumbs:600
+WARNING:crumbs:(1062, "Duplicate entry '20201202112530' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112530' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112530' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112530' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112530' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202112600' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112600' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112600' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112600' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112600' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112600' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112600' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112600' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112600' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:630
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112630' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112630' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112630' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112630' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112700' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112700' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112700' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112700' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112700' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112700' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112700' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202112700' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112700' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112700' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112700' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112700' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+DEBUG:crumbs:675
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112730' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112730' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112730' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112730' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:700
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112800' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202112800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112800' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112800' for key '20201202.PRIMARY'")
+DEBUG:crumbs:720
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112800' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112800' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112830' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112830' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112830' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112830' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112830' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202112900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112900' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112900' for key '20201202.PRIMARY'")
+DEBUG:crumbs:765
+WARNING:crumbs:(1062, "Duplicate entry '20201202112900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112900' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112900' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112900' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112900' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112930' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202112930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112930' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202112930' for key '20201202.PRIMARY'")
+DEBUG:crumbs:800
+WARNING:crumbs:(1062, "Duplicate entry '20201202112930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112930' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202112930' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202112930' for key '20201202.PRIMARY'")
+DEBUG:crumbs:810
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113000' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113000' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202113000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113000' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113030' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113030' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113030' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113030' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113030' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113000' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113030' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113030' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113030' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113030' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113030' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113030' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+DEBUG:crumbs:855
+WARNING:crumbs:(1062, "Duplicate entry '20201202113030' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113100' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113100' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113100' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113100' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113100' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113100' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113100' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113100' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113130' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113130' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202113130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113130' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113130' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+DEBUG:crumbs:900
+DEBUG:crumbs:900
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113200' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113200' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113200' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202113200' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113230' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113230' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113230' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:945
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113300' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113300' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202113300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113300' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113300' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113330' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113330' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113330' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113330' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+WARNING:crumbs:(1062, "Duplicate entry '20201202113330' for key '20201202.PRIMARY'")
+DEBUG:crumbs:990
+WARNING:crumbs:(1062, "Duplicate entry '20201202113330' for key '20201202.PRIMARY'")
+DEBUG:crumbs:_opw00001!!!
+DEBUG:crumbs:예수금!!!!
+DEBUG:crumbs:-00000007684080
+DEBUG:crumbs:sell samsung_elec : cannot_sell
+DEBUG:crumbs:sell lg_elec : cannot_sell
+DEBUG:crumbs:hold hanwha_aero
+DEBUG:crumbs:hold naver
+DEBUG:crumbs:buy kakao : cannot_buy
+WARNING:crumbs:(1062, "Duplicate entry '20201202113400' for key '20201202.PRIMARY'")
+WARNING:crumbs:(1062, "Duplicate entry '20201202113400' for key '20201202.PRIMARY'")
+DEBUG:crumbs:account_info 함수에 들어왔습니다!
+DEBUG:crumbs:계좌번호 : 8151260111

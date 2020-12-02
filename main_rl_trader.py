@@ -64,7 +64,6 @@ def stats_from_mysql(date):
 
     return result['close'].to_numpy()
 
-
     # for name in names:
     #     sql = f"select count(*) from "
 
@@ -117,7 +116,7 @@ class MultiStockEnv:
       - 2 = buy
     """
 
-    def __init__(self, data, initial_investment=50000000, tax_rate=0.0025, fees_rate=0.00015):
+    def __init__(self, data, initial_investment=50000000, tax_rate=0.0025, fees_rate=0.00035):
         # data
         self.stock_price_history = data
         self.n_step, self.n_stock = self.stock_price_history.shape
@@ -283,11 +282,11 @@ if __name__ == '__main__':
         date = datetime.today().strftime("%Y%m%d")
         data = stats_from_mysql(datetime.today())
         sql = "select * from states ORDER BY id DESC LIMIT 1"
-        state_conn = db_settings.db_connect('saved_states')
         action_conn = db_settings.db_connect('rl_actions')
 
         prev_state = False
         while(datetime.now().strftime("%H:%M:%S") <= "15:30:00"):
+            state_conn = db_settings.db_connect('saved_states')
             with state_conn.cursor() as cursor:
                 cursor.execute(sql)
                 state = cursor.fetchone()
@@ -295,17 +294,23 @@ if __name__ == '__main__':
                 continue
             if prev_state and prev_state == state:
                 continue
+            logger.debug("new state input!")
             start_money = state['d2_deposit']
+            # state list 형태로 변형
+            state_formatted = np.array(list(state.values())[1:], ndmin=2)
+            # 이 state data에 현재 가격 추가해주기
+            new_data = state_formatted[0][5:10]
+            data = np.append(data, np.array([new_data]), axis=0)
             env = MultiStockEnv(data, start_money)
             state_size = env.state_dim
             action_size = len(env.action_space)
             agent = DQNAgent(state_size, action_size)
             scaler = get_scaler(env)
             # state 재가공
-            state_formatted = np.array(list(state.values())[1:], ndmin=2)
             state_formatted = scaler.transform(state_formatted)
             agent.load(f'{models_folder}/dqn.ckpt')
 
+            logger.debug("predict action!")
             action = agent.real_act(state_formatted)
             action = env.action_list[action]
             #mysql에 저장

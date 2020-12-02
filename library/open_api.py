@@ -5,6 +5,7 @@ from collections import defaultdict
 from library.logging_pack import *
 from library import cf
 import sys
+import time
 
 class Kiwoom(QAxWidget):
     def __init__(self):
@@ -13,6 +14,7 @@ class Kiwoom(QAxWidget):
         self._set_signal_slots()
         self.mod_gubun = 1 # 모의 투자
         self.data_collect = False
+        self.rq_count = 0
 
     def account_info(self):
         logger.debug("account_info 함수에 들어왔습니다!")
@@ -85,6 +87,7 @@ class Kiwoom(QAxWidget):
         self.dynamicCall("SetInputValue(QString, QString)", id, value)
 
     def comm_rq_data(self, rqname, trcode, next, screen_no):
+        self.exit_check()
         self.dynamicCall("CommRqData(QString, QString, int, QString", rqname, trcode, next, screen_no)
         self.tr_event_loop = QEventLoop()
         self.tr_event_loop.exec_()
@@ -133,14 +136,16 @@ class Kiwoom(QAxWidget):
             low = self._get_comm_data(trcode, rqname, i, "저가")
             close = self._get_comm_data(trcode, rqname, i, "현재가")
             volume = self._get_comm_data(trcode, rqname, i, "거래량")
-
-            self.ohlcv['date'].append(date[:])
-            self.ohlcv['open'].append(abs(int(open)))
-            self.ohlcv['high'].append(abs(int(high)))
-            self.ohlcv['low'].append(abs(int(low)))
-            self.ohlcv['close'].append(abs(int(close)))
-            self.ohlcv['volume'].append(int(volume))
-            self.ohlcv['sum_volume'].append(int(0))
+            try:
+                self.ohlcv['date'].append(date[:])
+                self.ohlcv['open'].append(abs(int(open)))
+                self.ohlcv['high'].append(abs(int(high)))
+                self.ohlcv['low'].append(abs(int(low)))
+                self.ohlcv['close'].append(abs(int(close)))
+                self.ohlcv['volume'].append(int(volume))
+                self.ohlcv['sum_volume'].append(int(0))
+            except Exception as e:
+                logger.debug(e)
 
 
     # trader가 호출 할때는 collector_opt10081과 다르게 1회만 _get_comm_data 호출 하면 된다.
@@ -473,3 +478,17 @@ class Kiwoom(QAxWidget):
             return ret
         except Exception as e:
             logger.critical(e)
+
+    # openapi 조회 카운트를 체크 하고 cf.max_api_call 횟수 만큼 카운트 되면 봇이 꺼지게 하는 함수
+    def exit_check(self):
+        time.sleep(cf.TR_REQ_TIME_INTERVAL)
+        self.rq_count += 1
+        # openapi 조회 count 출력 (수정): 항상 출력이 아니라 45, 100으로 나눠질 때만
+        if self.rq_count % 45 == 0:
+            logger.debug(self.rq_count)
+            time.sleep(cf.TR_REQ_TIME_INTERVAL_LONG)
+        if self.rq_count % 100 == 0:
+            logger.debug(self.rq_count)
+            time.sleep(cf.TR_REQ_TIME_INTERVAL_LONG * 2)
+        if self.rq_count == cf.max_api_call:
+            sys.exit(1)
