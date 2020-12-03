@@ -6,7 +6,7 @@ from library import db_settings
 from library import open_api
 from collections import defaultdict
 import time
-from pykiwoom.kiwoom import *
+
 
 def load_previous_day_data(kiwoom, date):
     kiwoom.data_collect = True
@@ -64,8 +64,8 @@ if __name__ == "__main__":
                 conns[name].cursor().execute(sql)
                 conns[name].commit()
             except Exception as e:
-                logger.warn(e)
-                time.sleep(0.5)
+                pass
+                # logger.warn(e)
             else:
                 continue
 
@@ -110,6 +110,8 @@ if __name__ == "__main__":
             actions = list(action.values())[1:]
             buy_count = sum(1 for x in actions if x == 2)
             j = 0 # for indexing current_price
+            # 지정가 매도 주문 네이버 예시 kiwoom.send_order("지정가매도", "0101", kiwoom.account_number, 2, "035420", 266, 286000, "00", "")
+            # kiwoom.send_order("지정가매도", "0101", kiwoom.account_number, 2, "035420", 266, 286000, "00", "")
             flag = False
             for code, action in zip(codes, actions):
                 # 전량 매도
@@ -126,6 +128,7 @@ if __name__ == "__main__":
                         continue
                     kiwoom.send_order("send_order_req", "0101", kiwoom.account_number, 2, code,
                                       stocks_owned[j], 0, "03", "")
+
                     flag = True
                     logger.debug(f"sell {names[j]} : {stocks_owned[j]}")
                 # n분의 1 구매
@@ -149,6 +152,7 @@ if __name__ == "__main__":
                 logger.debug("매수매도 주문 체결 대기")
                 time.sleep(5)
 
+        time.sleep(20)
 
 
 

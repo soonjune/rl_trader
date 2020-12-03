@@ -23,7 +23,7 @@ import pymysql
 def get_data():
     # returns a T x 3 list of stock prices
     # each row is a different stock
-    df = pd.read_csv('2_data_test.csv')
+    df = pd.read_csv('78test2019.csv')
     return df.values
 
 
@@ -66,6 +66,26 @@ def stats_from_mysql(date):
 
     # for name in names:
     #     sql = f"select count(*) from "
+
+def create_csv_for_test(date):
+    conns = db_settings.db_conns()
+    names = ['samsung_elec', 'lg_elec', 'hanwha_aero', 'naver', 'kakao']
+    data = np.empty([1, 5], dtype=np.int64)
+    for i in range(2, -1, -1):
+        dfs = []
+        shifted_date = date - BDay(i)
+        sql = f'select date, close from `{shifted_date.strftime("%Y%m%d")}`'
+        for name in names:
+            dfs.append(pd.read_sql(sql, con=conns[name]))
+        result = pd.concat(dfs,axis=1,join='inner')['close'].to_numpy()
+        if data.any():
+            data = np.append(data, result, axis=0)
+        else:
+            data = result
+
+    df = pd.DataFrame(data)
+    date = date.strftime("%Y%m%d")
+    df.to_csv(f'{date}-3.csv', header=['samsung_elec', 'lg_elec', 'hanwha_aero', 'naver', 'kakao'], index=False)
 
 def count_rows(con, date):
     cursor = con.cursor()
@@ -116,7 +136,7 @@ class MultiStockEnv:
       - 2 = buy
     """
 
-    def __init__(self, data, initial_investment=50000000, tax_rate=0.0025, fees_rate=0.00035):
+    def __init__(self, data, initial_investment=50000000, tax_rate=0.0025, fees_rate=0.00015):
         # data
         self.stock_price_history = data
         self.n_step, self.n_stock = self.stock_price_history.shape
@@ -259,7 +279,12 @@ def play_one_episode(agent, env, is_train):
             if is_train == 'train':
                 agent.update_replay_memory(state, action, reward, next_state, done)
                 agent.replay(batch_size)
+            # test용 => csv 생성을 위한
+            elif is_train == 'test':
+                portfolio_value_per_action.append(info['cur_val'])
             state = next_state
+        # update lr after 1 epoch
+        agent.scheduler.step()
 
         return info['cur_val']
 
@@ -277,6 +302,10 @@ if __name__ == '__main__':
     parser.add_argument('-m', '--mode', type=str, required=True,
                         help='either "train" / "test" / "real"')
     args = parser.parse_args()
+
+    if args.mode == "data":
+        create_csv_for_test(datetime.today())
+        sys.exit(0)
 
     if args.mode == "real":
         date = datetime.today().strftime("%Y%m%d")
@@ -358,9 +387,12 @@ if __name__ == '__main__':
             num_episodes = 1
 
             # agent.epsilon = 0.01
-
-            # load trained weights
-            agent.load(f'{models_folder}/dqn.ckpt')
+            # csv 생성용
+            portfolio_value_per_action = []
+        
+        # !! 주의 완전히 새롭게 해려면 indent 해줘야
+        # load trained weights now regardless of test/training
+        agent.load(f'{models_folder}/dqn.ckpt')
 
         # play the game num_episodes times
         for e in range(num_episodes):
@@ -381,3 +413,6 @@ if __name__ == '__main__':
 
         # save portfolio value for each episode
         np.save(f'{rewards_folder}/{args.mode}.npy', portfolio_value)
+        if args.mode == 'test':
+            df = pd.DataFrame(portfolio_value_per_action, columns=['value'])
+            df.to_csv('test_value_output.csv')

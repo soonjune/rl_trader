@@ -44,7 +44,7 @@ class DQNAgent(object):
         self.action_size = action_size # output size
         self.memory = ReplayBuffer(state_size, action_size, size=500)
         self.gamma = 0.95  # discount rate
-        self.epsilon = 1.0  # exploration rate
+        self.epsilon = 0.8  # exploration rate - for newly update decay faster
         self.epsilon_min = 0.01
         self.epsilon_decay = 0.995
         self.model = MLP(state_size, action_size).to(device)
@@ -52,6 +52,7 @@ class DQNAgent(object):
         # Loss and optimizer
         self.criterion = nn.MSELoss()
         self.optimizer = torch.optim.Adam(self.model.parameters())
+        self.scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer=self.optimizer, gamma=0.999)
 
 
     def update_replay_memory(self, state, action, reward, next_state, done):
